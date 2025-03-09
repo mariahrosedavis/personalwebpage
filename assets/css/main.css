@@ -4687,3 +4687,18 @@ input, select, textarea {
 		}
 
 	}
+	@font-face {
+		font-family: 'Rustling Sound';
+		src: url('../webfonts/Rustling\ Sound.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	/* Style for "Hey there!" */
+	.cursive {
+		font-family: 'Rustling Sound', cursive;
+		font-size: 8rem;
+		font-weight: normal;
+		color: #ffffff; /* Black */
+		text-transform: none;
+	}
