@@ -2332,8 +2332,8 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-	box-shadow: inset 0 0 0 2px #92b5e5;
-	color: #92b5e5 !important;
+	box-shadow: inset 0 0 0 2px #000000;
+	color: #cfeadb !important;
 }
 
 input[type="submit"].primary,
@@ -3363,12 +3363,23 @@ table.alt tbody tr td {
 	width: 100%;
 	height: 100%;
 	background-color: #212931;
-	background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+	background-image: 
+	url("../../images/alps-9266131_1920.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
 	background-size: auto, auto, 100% auto;
 	background-position: center, center, top center;
 	background-repeat: repeat, no-repeat, no-repeat;
 	background-attachment: scroll, scroll, scroll;
 	z-index: -1;
+}
+/* Add an overlay */
+#wrapper > .bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust opacity: 0.4 means 40% black */
 }
 
 #wrapper>.bg.fixed {
@@ -3500,8 +3511,9 @@ body.is-preload #wrapper.fade-in:before {
 #intro input[type="button"]:hover,
 #intro button:hover,
 #intro .button:hover {
-	box-shadow: inset 0 0 0 2px #92b5e5;
-	color: #92b5e5 !important;
+	border-color: #c5c3c3dc !important;
+	color: #ffffffeb !important;
+	background-color: #ffffff39;
 }
 
 #intro input[type="submit"].primary,
@@ -3722,8 +3734,9 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 }
 
 #header .logo:hover {
-	border-color: #92b5e5 !important;
-	color: #92b5e5 !important;
+	border-color: #c5c3c3dc !important;
+	color: #ffffffeb !important;
+	background-color: #ffffff39;
 }
 
 @media screen and (max-width: 980px) {
@@ -4878,12 +4891,11 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 }
 
 .complimentary {
-	font-family: 'Font Awesome 5 Free';
-	font-weight: 500 !important;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400 !important;
 	font-size: 5.5rem;
 	font-style: normal;
 	display: inline-block;
-	margin-top: 35px;
-	/* Adjust this value as needed */
+	margin-top: 30px;
 	position: relative;
 }
