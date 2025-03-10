@@ -4884,8 +4884,8 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 /* Style for "Hey there!" */
 .cursive {
 	font-family: 'Rustling Sound', cursive;
-	font-size: 8vw;
-	font-weight: normal !important;
+	font-size: 8rem;
+	font-weight: normal;
 	color: #fac191;
 	text-transform: none;
 }
@@ -4893,9 +4893,9 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 .complimentary {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 500 !important;
-	font-size: 5vw;
+	font-size: 5rem;
 	font-style: normal;
 	display: inline-block;
-	margin-top: 3vw;
+	margin-top: 3rem;
 	position: relative;
 }
