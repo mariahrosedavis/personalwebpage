@@ -4900,9 +4900,23 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 	position: relative;
 }
 
+/* Responsive Header */
+header.major {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header.major h1 {
+    font-size: clamp(26px, 4vw, 42px); /* Dynamically adjusts */
+}
+
+header.major p {
+    font-size: clamp(16px, 2vw, 20px);
+}
+
 /* Timeline Section */
 #timeline {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #6e5f54 100%);
     padding: 50px 0;
 }
 
@@ -4910,45 +4924,73 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px;
+    max-width: 1000px; /* Wider for less whitespace */
     margin: 0 auto;
     position: relative;
 }
 
+/* Timeline Items */
 .timeline-item {
     display: flex;
-    align-items: center;
-    margin: 20px 0;
-    position: relative;
+    justify-content: center;
     width: 100%;
-    padding-left: 40px;
+    margin-bottom: 30px;
 }
 
-.timeline-date {
-    font-weight: bold;
-    margin-right: 20px;
-    color: #0077cc;
-    min-width: 80px;
-    text-align: right;
-}
-
-.timeline-dot {
-    width: 15px;
-    height: 15px;
-    background: #0077cc;
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-}
-
+/* Make Containers Bigger */
 .timeline-content {
     background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* More padding */
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s;
+    max-width: 750px; /* Larger containers */
+    width: 100%;
 }
 
 .timeline-content:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+}
+
+/* Updated Date Styling */
+.timeline-date {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #777; /* Muted color */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Enhancing Titles */
+.timeline-content h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* Spacing for Consistency */
+.timeline-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .timeline-container {
+        max-width: 95%;
+    }
+
+    .timeline-content {
+        max-width: 100%;
+    }
+
+    .timeline-content h3 {
+        font-size: 20px;
+    }
+
+    .timeline-content p {
+        font-size: 16px;
+    }
 }
