@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Mariah's Personal Website</title>
+	<title>Mariah's Website - Homepage</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,7 +35,7 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="https://calendly.com/mariahrosedavis/quick-chat" class="logo">Schedule A Call</a>
+			<a href="https://calendly.com/mariahrosedavis/quick-chat" class="logo" target="_blank">Schedule A Call</a>
 		</header>
 
 		<!-- Nav -->
@@ -165,8 +165,8 @@
 
 		<!-- Footer -->
 		<footer id="footer">
-			<section>
-				<form method="post" action="https://formspree.io/f/mrbpbyjl">
+			<section> 
+				<form id="contact-form" method="post" action="https://formspree.io/f/mrbpbyjl" target="_blank" onsubmit="clearForm()">
 					<div class="fields">
 						<div class="field">
 							<label for="name">Name</label>
@@ -186,24 +186,34 @@
 					</ul>
 				</form>
 			</section>
+			
+			<!-- JavaScript to clear the form after submission -->
+			<script>
+				function clearForm() {
+					setTimeout(function() {
+						document.getElementById("contact-form").reset();
+					}, 1000); // Wait 1 second before clearing the form
+				}
+			</script>
+
 			<section class="split contact">
 				<section>
 					<h3>Calendly</h3>
-					<p><a href="https://calendly.com/mariahrosedavis/quick-chat">Schedule a 30 minute call</a></p>
+					<p><a href="https://calendly.com/mariahrosedavis/quick-chat" target="_blank">Schedule a 30 minute call</a></p>
 				</section>
 				<section>
 					<h3>Email</h3>
-					<p><a href="mariahrosedavis@gmail.com">mariahrosedavis@gmail.com</a></p>
+					<p><a href="mailto:mariahrosedavis@gmail.com">mariahrosedavis@gmail.com</a></p>
 				</section>
 				<section>
 					<h3>Socials</h3>
 					<ul class="icons alt">
 						<li><a href="https://www.linkedin.com/in/mariahrosedavis/"
-								class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/mariahrosedavis" class="icon brands alt fa-github"><span
+								class="icon brands alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/mariahrosedavis" class="icon brands alt fa-github" target="_blank"><span
 									class="label">GitHub</span></a></li>
 						<li><a href="https://www.instagram.com/mariahrosedavis/"
-								class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								class="icon brands alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
 					</ul>
 				</section>
 			</section>
@@ -213,7 +223,7 @@
 		<div id="copyright">
 			<ul>
 				<li>&copy;mariahdavis.dev</li>
-				<li><a href="https://github.com/mariahrosedavis/personalwebpage">GitHub Repo</a></li>
+				<li><a href="https://github.com/mariahrosedavis/personalwebpage" target="_blank">GitHub Repo</a></li>
 			</ul>
 		</div>
 
