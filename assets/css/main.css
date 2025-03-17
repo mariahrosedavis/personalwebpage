@@ -3379,7 +3379,7 @@ table.alt tbody tr td {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Adjust opacity: 0.4 means 40% black */
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity: 0.4 means 40% black */
 }
 
 #wrapper>.bg.fixed {
