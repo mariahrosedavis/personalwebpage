@@ -4919,7 +4919,7 @@ header.major p {
 
 /* Timeline Section */
 #timeline {
-	background: linear-gradient(135deg, #fbf4ed 0%, #1f2028 100%);
+	background-color: #f0e1e1;
 	padding: 50px 0;
 }
 
@@ -5002,18 +5002,24 @@ header.major p {
 		font-size: 16px;
 	}
 }
+
 /* Centering the list inside timeline-content */
 .timeline-list {
-    display: inline-block; /* Allows centering within text */
-    text-align: left; /* Ensures bullets and text align properly */
-    padding-left: 0; /* Removes default list padding */
-    list-style-position: inside; /* Moves bullets inside content box */
+	display: inline-block;
+	/* Allows centering within text */
+	text-align: left;
+	/* Ensures bullets and text align properly */
+	padding-left: 0;
+	/* Removes default list padding */
+	list-style-position: inside;
+	/* Moves bullets inside content box */
 }
 
 /* Styling list items */
 .timeline-list li {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 8px; /* Creates spacing between items */
+	font-size: 18px;
+	line-height: 1.6;
+	color: #444;
+	margin-bottom: 8px;
+	/* Creates spacing between items */
 }
