@@ -1,139 +1,269 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-	<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-P9DVWWZC');</script>
-	<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P9DVWWZC');</script>
+  <!-- End Google Tag Manager -->
 
-    <title>Mariah's Website - About</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <meta charset="utf-8" />
+  <title>Mariah's Website - About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <!-- Page-scoped enhancements (keeps global CSS untouched) -->
+  <style>
+    /* Subtle hero texture that matches your dark bg */
+    #header:after {
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(1200px 500px at 50% 100%, rgba(255,255,255,.06), transparent 60%);
+      pointer-events:none;
+    }
+
+    /* Section header */
+    #main header.major h1 {
+      letter-spacing:.08em;
+    }
+    #main header.major p {
+      max-width: 48ch;
+      margin: 0.25rem auto 0;
+      color:#717981;
+    }
+
+    /* Vertical timeline (on brand) */
+    .v-tl {
+      position: relative;
+      max-width: 56rem;
+      margin: 0 auto 2rem;
+      padding: 1rem 0 3rem;
+    }
+    .v-tl:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: #eeeeee;
+      transform: translateX(-50%);
+    }
+
+    .v-item {
+      position: relative;
+      width: 50%;
+      padding: 0 2rem 2.5rem;
+    }
+    .v-item:nth-child(odd) { left: 0; text-align: right; }
+    .v-item:nth-child(even){ left: 50%; text-align: left; }
+
+    .v-node {
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: #fac191;
+      box-shadow: 0 0 0 6px rgba(250,193,145,.20);
+    }
+
+    .v-card {
+      display: inline-block;
+      text-align: left;
+      background: #fff;
+      border: 2px solid #eeeeee;
+      border-radius: 12px;
+      padding: 1.25rem 1.25rem 1.1rem;
+      max-width: 26rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,.06);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .v-card:hover {
+      transform: translateY(-2px);
+      border-color: #fac191;
+      box-shadow: 0 10px 28px rgba(0,0,0,.09);
+    }
+
+    .v-year {
+      display: inline-flex;
+      align-items: center;
+      gap:.5rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-weight: 900; letter-spacing:.08em;
+      color:#212931;
+    }
+    .v-year .dot {
+      width:8px; height:8px; border-radius:50%; background:#fac191;
+      box-shadow: 0 0 0 4px rgba(250,193,145,.25);
+    }
+
+    .v-title { margin:.4rem 0 .35rem; font-size:1.15rem; }
+    .v-text  { margin:0; color:#444; line-height:1.7; }
+
+    .v-list { margin:.6rem 0 0 1rem; padding:0; }
+    .v-list li { margin:.25rem 0; color:#444; }
+
+    /* Mobile stacking */
+    @media (max-width: 980px) {
+      .v-tl:before { left: 24px; transform:none; }
+      .v-item { width: 100%; padding: 0 0 2.25rem 3.25rem; text-align:left; }
+      .v-item:nth-child(odd), .v-item:nth-child(even) { left: 0; }
+      .v-node { left: 24px; transform: translate(-50%,-50%); }
+      .v-card { max-width: none; width: 100%; }
+    }
+
+    /* Soft section background matches your system neutrals */
+    .section--timeline {
+      background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+      border-top: 2px solid #eeeeee;
+      border-bottom: 2px solid #eeeeee;
+      padding-top: 3rem !important;
+      padding-bottom: 2rem !important;
+    }
+
+    /* Breadcrumb/“Go Home” button refinement */
+    #header .logo {
+      border-radius: 10px;
+    }
+
+    /* Active nav pill uses your white pill + peach hover */
+    #nav ul.links li.active { background:#ffffff; }
+    #nav ul.links li.active a:hover { color:#fac191 !important; }
+  </style>
 </head>
 <body class="is-preload">
-	
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9DVWWZC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9DVWWZC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-        <!-- Header -->
-        <header id="header">
-            <a href="index.html" class="logo">Go Home</a>
-        </header>
+  <!-- Wrapper -->
+  <div id="wrapper" class="fade-in">
+    <div class="bg"></div>
 
-        <!-- Nav -->
-        <nav id="nav">
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="about.html">About</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header id="header" role="banner" aria-label="Site header">
+      <a href="index.html" class="logo" aria-label="Go to Home">Go Home</a>
+    </header>
 
-        <!-- Main -->
-        <div id="main">
-            <header class="major">
-                <h1>Professional Timeline</h1>
-                <p>Here's a brief overview of my professional journey so far.</p>
-            </header>
+    <!-- Nav -->
+    <nav id="nav" role="navigation" aria-label="Primary">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
 
-            <!-- Timeline Section -->
-            <section id="timeline">
-                <div class="timeline-container">
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="timeline-date">2025</span>
-                            <h3>Began My Marketing Consulting Business</h3>
-                            <p>Launched my personal brand and started consulting in marketing analytics.</p>
-                        </div>
-                    </div>
+    <!-- Main -->
+    <main id="main" role="main">
+      <header class="major">
+        <h1><span class="cursive" aria-hidden="true">About Me</span><br/>Professional Timeline</h1>
+        <p>Snapshots from my journey in marketing analytics, operations, and data-driven growth.</p>
+      </header>
 
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="timeline-date">2025</span>
-                            <h3>Hired at BSG</h3>
-                            <p>This is where my love for contract work and the possibilities of remote work began.</p>
-                        </div>
-                    </div>
+      <!-- Timeline Section -->
+      <section id="timeline" class="section--timeline" aria-label="Career timeline">
+        <div class="v-tl">
+          <!-- 2025 — Consulting Business -->
+          <article class="v-item">
+            <span class="v-node" aria-hidden="true"></span>
+            <div class="v-card">
+              <div class="v-year"><span class="dot" aria-hidden="true"></span>2025</div>
+              <h3 class="v-title">Began My Marketing Consulting Business</h3>
+              <p class="v-text">Launched my personal brand and began consulting in marketing analytics and performance ops.</p>
+            </div>
+          </article>
 
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="timeline-date">2022</span>
-                            <h3>Promoted to Marketing Operations Associate</h3>
-                            <p>Managed automation projects to improve efficiency in marketing operations.</p>
-                        </div>
-                    </div>
+          <!-- 2025 — BSG -->
+          <article class="v-item">
+            <span class="v-node" aria-hidden="true"></span>
+            <div class="v-card">
+              <div class="v-year"><span class="dot" aria-hidden="true"></span>2025</div>
+              <h3 class="v-title">Hired at BSG</h3>
+              <p class="v-text">Fell in love with contract work and the flexibility of remote, high-impact projects.</p>
+            </div>
+          </article>
 
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="timeline-date">2021</span>
-                            <h3>Promoted to Senior Marketing Operations Coordinator</h3>
-                            <p>Created time-saving automations as part of a small but mighty team.</p>
-                        </div>
-                    </div>
+          <!-- 2022 — MOps Associate -->
+          <article class="v-item">
+            <span class="v-node" aria-hidden="true"></span>
+            <div class="v-card">
+              <div class="v-year"><span class="dot" aria-hidden="true"></span>2022</div>
+              <h3 class="v-title">Promoted to Marketing Operations Associate</h3>
+              <p class="v-text">Owned automation projects to improve data quality, routing, and campaign efficiency.</p>
+            </div>
+          </article>
 
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="timeline-date">2021</span>
-                            <h3>Started at Elastic</h3>
-                            <p>Gained expertise in data center operations and analytics.</p>
-                        </div>
-                    </div>
+          <!-- 2021 — Sr. MOps Coordinator -->
+          <article class="v-item">
+            <span class="v-node" aria-hidden="true"></span>
+            <div class="v-card">
+              <div class="v-year"><span class="dot" aria-hidden="true"></span>2021</div>
+              <h3 class="v-title">Promoted to Senior Marketing Operations Coordinator</h3>
+              <p class="v-text">Built time-saving automations and frameworks as part of a small but mighty team.</p>
+            </div>
+          </article>
 
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="timeline-date">2020</span>
-                            <h3>Started at Equinix</h3>
-                            <p>Worked on data center projects, implementing data-driven strategies.</p>
-                        </div>
-                    </div>
+          <!-- 2021 — Elastic -->
+          <article class="v-item">
+            <span class="v-node" aria-hidden="true"></span>
+            <div class="v-card">
+              <div class="v-year"><span class="dot" aria-hidden="true"></span>2021</div>
+              <h3 class="v-title">Started at Elastic</h3>
+              <p class="v-text">Expanded expertise in marketing analytics and data infrastructure at scale.</p>
+            </div>
+          </article>
 
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="timeline-date">2019</span>
-                            <h3>Received My Bachelor's Degree in Economics</h3>
-							<ul class="timeline-list">
-								<li>Graduated with honors</li>
-								<li>Minored in Data Analytics and Business Administration and also did this and that and the other and then some things after that as well</li>
-							</ul>
-                        </div>
-                    </div>
+          <!-- 2020 — Equinix -->
+          <article class="v-item">
+            <span class="v-node" aria-hidden="true"></span>
+            <div class="v-card">
+              <div class="v-year"><span class="dot" aria-hidden="true"></span>2020</div>
+              <h3 class="v-title">Started at Equinix</h3>
+              <p class="v-text">Supported data-driven strategy work within data center environments.</p>
+            </div>
+          </article>
 
-                </div>
-            </section>
-
-        </div> <!-- Closing div for #main -->
-
-        <!-- Copyright -->
-        <div id="copyright">
-            <ul>
-                <li>&copy; Mariah Davis</li>
-                <li><a href="https://github.com/mariahrosedavis/personalwebpage" target="_blank">GitHub Repo</a></li>
-            </ul>
+          <!-- 2019 — BA Economics -->
+          <article class="v-item">
+            <span class="v-node" aria-hidden="true"></span>
+            <div class="v-card">
+              <div class="v-year"><span class="dot" aria-hidden="true"></span>2019</div>
+              <h3 class="v-title">Bachelor’s Degree in Economics</h3>
+              <ul class="v-list">
+                <li>Graduated with honors</li>
+                <li>Minors: Data Analytics &amp; Business Administration</li>
+              </ul>
+            </div>
+          </article>
         </div>
+      </section>
+    </main>
 
-    </div> <!-- Closing div for #wrapper -->
+    <!-- Copyright -->
+    <div id="copyright" role="contentinfo">
+      <ul>
+        <li>&copy; Mariah Davis</li>
+        <li><a href="https://github.com/mariahrosedavis/personalwebpage" target="_blank" rel="noopener">GitHub Repo</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
