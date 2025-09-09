@@ -5023,3 +5023,21 @@ header.major p {
 	margin-bottom: 8px;
 	/* Creates spacing between items */
 }
+
+/* 1) Make sure the big header text can overflow naturally */
+.post header.major,
+.post header.major h1 {
+  overflow: visible;
+}
+
+/* 2) Nudge the cursive word off the edge so the last glyph isn't clipped */
+.post header.major h1 .cursive {
+  display: inline-block;        /* ensure padding/margin apply cleanly */
+  margin-right: 0.15em;         /* tiny breathing room for punctuation */
+  padding-right: 0.05em;        /* belt-and-suspenders */
+}
+
+/* Optional: if you ever add text-stroke on .cursive, keep the stroke visible */
+.post header.major h1 .cursive {
+  paint-order: stroke fill;     /* prevents stroke from being visually cropped */
+}
