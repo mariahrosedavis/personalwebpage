@@ -1,6 +1,5 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-
 /*
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
@@ -5047,4 +5046,15 @@ header.major p {
 /* Optional: if you ever add text-stroke on .cursive, keep the stroke visible */
 .post header.major h1 .cursive {
   paint-order: stroke fill;     /* prevents stroke from being visually cropped */
+}
+
+/* Only affect images in AI-headshots blog post */
+#ai-headshots-post figure.image.fit {
+  max-width: 60%;    /* half-ish width */
+  margin: 2rem auto; /* centered with spacing */
+}
+
+#ai-headshots-post figure.image.fit img {
+  width: 100%;
+  height: auto;
 }
