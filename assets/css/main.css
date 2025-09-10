@@ -4886,19 +4886,26 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 /* Style for "Hey there!" */
 .cursive {
 	font-family: 'Rustling Sound', cursive;
-	font-size: 8rem;
+	font-size: clamp(8rem, 14vw, 10rem);
 	font-weight: normal;
 	color: #fac191;
 	text-transform: none;
 }
 
+/* Responsive override for the resume page header only */
+.post header.major h1 .cursive {
+  font-size: clamp(4rem, 14vw, 6rem); /* scales on mobile → desktop */
+  display: inline-block;              /* keeps padding/margins reliable */
+}
+
+
 .complimentary {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 500 !important;
-	font-size: 5rem;
+	font-size: clamp(3rem, 10vw, 3rem);
 	font-style: normal;
 	display: inline-block;
-	margin-top: 3rem;
+	margin-top: 2rem;
 	position: relative;
 }
 
