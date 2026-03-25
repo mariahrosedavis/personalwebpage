@@ -4901,10 +4901,10 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 .complimentary {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 500 !important;
-	font-size: clamp(3rem, 10vw, 3rem);
+	font-size: clamp(4rem, 12vw, 3rem);
 	font-style: normal;
 	display: inline-block;
-	margin-top: 2rem;
+	margin-top: 6rem;
 	position: relative;
 }
 

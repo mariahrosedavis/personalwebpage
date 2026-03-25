@@ -12,21 +12,47 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
       <!-- Blog-specific CSS -->
-    <style>
-        .image.right,
-        .image.left {
-        width: 40%;        /* or whatever width you want */
-        max-width: 400px;  /* optional cap */
-        overflow: hidden;  /* hide overflow for cropping */
+        <style>
+        /* Force the wrapper to be a real block with a real width */
+        #main .post .image.left,
+        #main .post .image.right {
+            display: block;
+            box-sizing: border-box;
+            width: 33%;
+            max-width: 360px;
         }
 
-        .image.right img,
-        .image.left img {
-        width: 100%;       /* stretch to fill container */
-        height: 100%;
-        object-fit: cover; /* crop rather than squish */
+        /* Keep margins inside the content area */
+        #main .post .image.left  { float: left;  margin: 0 1.5em 1.5em 0; }
+        #main .post .image.right { float: right; margin: 0 0 1.5em 1.5em; }
+
+        /* Make the img obey the wrapper */
+        #main .post .image.left img,
+        #main .post .image.right img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
         }
-    </style>
+
+        /* Clear floats so the post's layout doesn't get weird */
+        #main .post::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* Mobile: stack */
+        @media screen and (max-width: 736px) {
+            #main .post .image.left,
+            #main .post .image.right {
+            float: none;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 1.5em 0;
+            }
+        }
+        </style>
 </head>
 <body class="is-preload">
     <div id="wrapper">
@@ -46,7 +72,7 @@
         <div id="main">
             <article class="post" id="ai-headshots-post">
             <header class="major">
-                <span class="date">September 10, 2025</span>
+                <span class="date">October 30, 2025</span>
                 <h1>To AI or Not to AI? That is the question</h1>
                 <p>Is the use of AI headshots ethical? Given the advantages and cost-effectiveness of this practice, should it be encouraged? How does this impact the way in which we view ourselves and each other? Could this be a breakthrough or lead to something more insidious in nature?</p>
             </header>
@@ -56,23 +82,23 @@
             <div class="row gtr-50 gtr-uniform">
                 <!-- Top row (3 images) -->
                 <div class="col-4">
-                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/AI Headshots/aragonai-f99ec050-1798-43e2-965a-3c7524604e05.jpeg" alt="AI Headshot 1" loading="lazy" /></span>
+                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/ai-headshot-1.jpeg" alt="AI Headshot 1" loading="lazy" /></span>
                 </div>
                 <div class="col-4">
-                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/AI Headshots/aragonai-4cfbcc90-5f30-4b2c-bfd4-d670ef3c6c93.jpeg" alt="AI Headshot 2" loading="lazy" /></span>
+                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/ai-headshot-2.jpeg" alt="AI Headshot 2" loading="lazy" /></span>
                 </div>
                 <div class="col-4">
-                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/AI Headshots/aragonai-a896a5de-282f-4a43-969f-148136669e96.jpeg" alt="AI Headshot 3" loading="lazy" /></span>
+                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/ai-headshot-3.jpeg" alt="AI Headshot 3" loading="lazy" /></span>
                 </div>
                 <!-- Bottom row (3 images) -->
                 <div class="col-4">
-                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/AI Headshots/aragonai-4d898954-bd93-4d27-92b4-a877033e9a31.jpeg" alt="AI Headshot 4" loading="lazy" /></span>
+                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/ai-headshot-4.jpeg" alt="AI Headshot 4" loading="lazy" /></span>
                 </div>
                 <div class="col-4">
-                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/AI Headshots/aragonai-eab1a715-78d1-4ec5-8bc4-0664af2a91bf.jpeg" alt="AI Headshot 5" loading="lazy" /></span>
+                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/ai-headshot-5.jpeg" alt="AI Headshot 5" loading="lazy" /></span>
                 </div>
                 <div class="col-4">
-                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/AI Headshots/aragonai-783d60e5-1475-4a82-96f3-086c6257630f.jpeg" alt="AI Headshot 6" loading="lazy" /></span>
+                <span class="image fit"><img src="../images/blog-photos/ai-headshots-blog-1/ai-headshot-6.jpeg" alt="AI Headshot 6" loading="lazy" /></span>
                 </div>
             </div>
             </div>
@@ -114,7 +140,7 @@
 
             <!-- FLOAT LEFT image on wide screens (Massively already styles .image.left/.right) -->
             <span class="image left">
-                <img src="../images/blog-photos/ai-headshots-blog-1/AI Headshots/6fingers.jpg" alt="Close-up of compass" loading="lazy" />
+                <img src="../images/blog-photos/ai-headshots-blog-1/6fingers.jpg" alt="Close-up of compass" loading="lazy" />
             </span>
             <p>
                 This paragraph wraps around the left-floated image on desktop. On small screens, Massively stacks it
@@ -124,7 +150,7 @@
 
             <!-- FLOAT RIGHT image -->
             <span class="image right">
-                <img src="../images/blog-photos/ai-headshots-blog-1/AI Headshots/double-piercing.jpg" alt="Trail marker at junction" loading="lazy" />
+                <img src="../images/blog-photos/ai-headshots-blog-1/double-piercing.jpg" alt="Trail marker at junction" loading="lazy" />
             </span>
             <p>
                 Another section with a right-aligned image for visual rhythm. Again, it collapses cleanly on mobile.
