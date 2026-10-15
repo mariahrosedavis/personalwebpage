@@ -1,57 +1,169 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-P9DVWWZC');</script>
-	<!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mariah's Website - About</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <title>AIARE 1 Certification | Mariah Davis</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P9DVWWZC');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+      background: #f4f4f4;
+      color: #343434;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    .pdf-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 14px clamp(16px, 4vw, 48px);
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .pdf-title {
+      margin: 0;
+      font-size: clamp(15px, 2vw, 20px);
+      font-weight: 600;
+    }
+
+    .pdf-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pdf-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid #343434;
+      border-radius: 5px;
+      color: #343434;
+      background: #fff;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .pdf-button:hover,
+    .pdf-button-primary {
+      color: #fff;
+      background: #343434;
+    }
+
+    .pdf-button-primary:hover {
+      background: #555;
+    }
+
+    .pdf-button:focus-visible {
+      outline: 3px solid #3678c9;
+      outline-offset: 3px;
+    }
+
+    .pdf-viewer {
+      flex: 1;
+      min-height: 0;
+    }
+
+    .pdf-viewer iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 520px) {
+      .pdf-header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .pdf-actions {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
-<body class="is-preload">
-	
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9DVWWZC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header">
-            <a href="index.html" class="logo">Go Home</a>
-        </header>
-
-        
-       <!-- Main -->
-<div id="main">
-    <iframe src="img/AIARE 1 Certification.pdf" width="100%" height="800px" style="border: none;">
-        This browser does not support PDFs. Please download the PDF to view it:
-        <a href="img/AIARE 1 Certification.pdf">Download PDF</a>.
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-P9DVWWZC"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+      title="Google Tag Manager">
     </iframe>
-</div>
-        </div> <!-- Closing div for #main -->
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    
+  <header class="pdf-header">
+    <h1 class="pdf-title">AIARE 1 Certification</h1>
 
-    </div> <!-- Closing div for #wrapper -->
+    <nav class="pdf-actions" aria-label="Document actions">
+      <a class="pdf-button" href="index.html">
+        Home
+      </a>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+      <a
+        class="pdf-button"
+        href="img/AIARE%201%20Certification.pdf"
+        target="_blank"
+        rel="noopener">
+        Open PDF
+      </a>
 
+      <a
+        class="pdf-button pdf-button-primary"
+        href="img/AIARE%201%20Certification.pdf"
+        download="Mariah-Davis-AIARE-1-Certification.pdf">
+        Download
+      </a>
+    </nav>
+  </header>
+
+  <main class="pdf-viewer" aria-label="Certification PDF">
+    <iframe
+      src="img/AIARE%201%20Certification.pdf#view=FitH"
+      title="Mariah Davis AIARE 1 Certification">
+    </iframe>
+  </main>
 </body>
 </html>
