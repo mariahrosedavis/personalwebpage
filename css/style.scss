@@ -72,6 +72,12 @@ body{
 			z-index: -1;
 		}
 	}
+
+	.blog-status{
+		margin-top: 18px;
+		font-size: 14px;
+		font-style: italic;
+	}
 }
 
 .bg-gray{
@@ -1057,6 +1063,11 @@ p{
 
 		.buton{
 			padding: 10px 40px;
+
+			&:hover{
+				background: #fff !important;
+				color: #000 !important;
+			}
 		}
 	}
 }

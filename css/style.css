@@ -70,6 +70,11 @@ body {
   left: 0;
   z-index: -1;
 }
+.section-head .blog-status {
+  margin-top: 18px;
+  font-size: 14px;
+  font-style: italic;
+}
 
 .bg-gray {
   background: #f7f7f7;
@@ -1349,6 +1354,10 @@ p {
 }
 .contact .form .buton {
   padding: 10px 40px;
+}
+.contact .form .buton:hover {
+  background: #fff !important;
+  color: #000 !important;
 }
 
 /* -------------------------------------------------------
