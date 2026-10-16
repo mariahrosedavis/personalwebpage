@@ -165,13 +165,12 @@ p {
 
 .buton {
   padding: 10px 30px;
-  border: 1px solid #303f00b7;
+  border: 1px solid #1c1c1c;
   border-radius: 5px;
   font-size: 13px;
   -webkit-transition: all .5s;
   transition: all .5s;
-  background: #303f00b7;
-  color: #fff;
+  background: #fdfdfdc8;
 }
 .buton:hover {
   background: #1c1c1c;
