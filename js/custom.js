@@ -149,7 +149,13 @@ $(function() {
 $(window).on("load",function (){
 
     // Preloader
-    $(".loading").addClass("loading-end").fadeOut(1000);
+    var loading = $(".loading");
+
+    loading.addClass("loading-end");
+
+    setTimeout(function () {
+        loading.hide();
+    }, 1750);
 
 
     // isotope

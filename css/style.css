@@ -194,6 +194,18 @@ p {
   width: 100%;
   z-index: 99;
 }
+.navbar-default > .container {
+  opacity: 0;
+  -webkit-transform: translateY(2rem);
+          transform: translateY(2rem);
+  -webkit-transition: opacity 1s ease .9s, -webkit-transform 1s ease .9s;
+  transition: opacity 1s ease .9s, transform 1s ease .9s;
+}
+.loading-end ~ .navbar-default > .container {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
 .navbar-default .navbar-nav > li > a {
   margin: 0 !important;
   color: #fff !important;
@@ -276,6 +288,9 @@ p {
   background-size: cover;
   position: relative;
   overflow: hidden;
+  background-image: url('../img/pine-watt-2Hzmz15wGik-unsplash.jpg');
+  background-color: #000;
+
 }
 .header:after {
   content: '';
@@ -295,6 +310,16 @@ p {
   text-align: center;
   color: #fff;
   margin-top: 50px;
+  opacity: 0;
+  -webkit-transform: translateY(2rem);
+          transform: translateY(2rem);
+  -webkit-transition: opacity 1s ease .75s, -webkit-transform 1s ease .75s;
+  transition: opacity 1s ease .75s, transform 1s ease .75s;
+}
+.loading-end ~ .header .caption {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .header .caption h5 {
   font-size: 50px;
@@ -335,6 +360,22 @@ p {
 .header .svg svg {
   fill: #fff;
   width: 101%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading,
+  .navbar-default > .container,
+  .header .caption {
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .navbar-default > .container,
+  .header .caption {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 #particles-js {
