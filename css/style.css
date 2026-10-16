@@ -577,6 +577,320 @@ p {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
 }
+.portfolio .tech-logo-item {
+  height: 250px;
+  background: #f7f7f7;
+}
+.portfolio .tech-logo-item > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 145px;
+  height: 110px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* -------------------------------------------------------
+                     Personal Tech Stack
+-------------------------------------------------------- */
+.tech-stack {
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f6f7f2));
+  background: linear-gradient(180deg, #fff 0%, #f6f7f2 100%);
+}
+.tech-stack .tech-stack-heading {
+  max-width: 820px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 55px;
+}
+.tech-stack .stack-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: #6f793f;
+  font-family: 'Rustling Sound', cursive;
+  font-size: clamp(4.5rem, 8vw, 8rem);
+  font-weight: 700;
+  line-height: .85;
+}
+.tech-stack-heading p {
+  max-width: 760px;
+  margin: 28px auto 0;
+  color: #5f696a;
+  font-size: 16px;
+}
+.stack-note {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(111, 121, 63, .1);
+  color: #535b31;
+  font-size: 13px;
+}
+.stack-note a {
+  border-bottom: 1px solid currentColor;
+  color: #394013;
+  font-weight: 600;
+}
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 18px;
+}
+.tech-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 120px;
+  padding: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(57, 64, 19, .1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .88);
+  -webkit-box-shadow: 0 10px 28px rgba(28, 28, 28, .06);
+          box-shadow: 0 10px 28px rgba(28, 28, 28, .06);
+  color: #343434;
+  -webkit-transition: border-color .25s ease, -webkit-box-shadow .25s ease, -webkit-transform .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.tech-card:hover,
+.tech-card:focus {
+  border-color: rgba(111, 121, 63, .45);
+  -webkit-box-shadow: 0 16px 34px rgba(28, 28, 28, .12);
+          box-shadow: 0 16px 34px rgba(28, 28, 28, .12);
+  color: #343434;
+  outline: none;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.tech-card:focus-visible {
+  -webkit-box-shadow: 0 0 0 3px rgba(111, 121, 63, .25), 0 16px 34px rgba(28, 28, 28, .12);
+          box-shadow: 0 0 0 3px rgba(111, 121, 63, .25), 0 16px 34px rgba(28, 28, 28, .12);
+}
+.tech-mark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 58px;
+  height: 58px;
+  -ms-flex: 0 0 58px;
+      flex: 0 0 58px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 9px;
+  border: 1px solid rgba(57, 64, 19, .1);
+  border-radius: 13px;
+  background: #fff;
+}
+.tech-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.tech-details {
+  min-width: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.tech-details strong,
+.tech-details small {
+  display: block;
+}
+.tech-details strong {
+  margin-bottom: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.tech-details small {
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.tech-card > i {
+  color: #2e350f;
+  font-size: 12px;
+  opacity: .65;
+  -webkit-transition: opacity .25s ease, -webkit-transform .25s ease;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.tech-card:hover > i,
+.tech-card:focus > i {
+  opacity: 1;
+  -webkit-transform: translate(2px, -2px);
+          transform: translate(2px, -2px);
+}
+
+@media screen and (max-width: 767px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-stack .stack-kicker {
+    font-size: 5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-card,
+  .tech-card > i {
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .tech-card:hover,
+  .tech-card:focus {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+/* Logo-grid variation.
+   Remove "tech-stack--logo-grid" from the section to restore the original card design. */
+.tech-stack--logo-grid {
+  position: relative;
+  background: #f2f2f2;
+}
+.tech-stack--logo-grid:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 100%;
+  background-image: url(../img/dots.png);
+  opacity: .04;
+  pointer-events: none;
+}
+.tech-stack--logo-grid .container {
+  position: relative;
+  z-index: 1;
+}
+.tech-stack--logo-grid .stack-kicker {
+  color: #4386fa;
+}
+.tech-stack--logo-grid .section-head h3 {
+  color: #111;
+}
+.tech-stack--logo-grid .section-head h3:after {
+  opacity: .18;
+}
+.tech-stack--logo-grid .tech-stack-heading p {
+  color: #333;
+}
+.tech-stack--logo-grid .stack-note {
+  border: 1px solid #c9c9c9;
+  background: #fff;
+  color: #222;
+}
+.tech-stack--logo-grid .stack-note a {
+  color: #000;
+}
+.tech-stack--logo-grid .tech-grid {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+}
+.tech-stack--logo-grid .tech-card {
+  position: relative;
+  min-height: 190px;
+  padding: 26px 16px 22px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 18px;
+  background: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: center;
+}
+.tech-stack--logo-grid .tech-card:hover,
+.tech-stack--logo-grid .tech-card:focus {
+  border-color: #111;
+  background: #fff;
+  -webkit-box-shadow: 0 20px 45px rgba(0, 0, 0, .18);
+          box-shadow: 0 20px 45px rgba(0, 0, 0, .18);
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+.tech-stack--logo-grid .tech-mark {
+  width: 76px;
+  height: 76px;
+  -ms-flex-preferred-size: 76px;
+      flex-basis: 76px;
+  padding: 9px;
+  border: 0;
+  background: transparent;
+}
+.tech-stack--logo-grid .tech-details {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+.tech-stack--logo-grid .tech-details strong {
+  margin-bottom: 7px;
+  color: #111;
+  font-size: 15px;
+}
+.tech-stack--logo-grid .tech-details small {
+  min-height: 2.4em;
+  color: #4d4d4d;
+  font-size: 10px;
+  line-height: 1.2;
+}
+.tech-stack--logo-grid .tech-card > i {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  color: #222;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .tech-stack--logo-grid .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-stack--logo-grid .tech-card {
+    min-height: 175px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tech-stack--logo-grid .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-stack--logo-grid .tech-card:hover,
+  .tech-stack--logo-grid .tech-card:focus {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
 
 /* -------------------------------------------------------
                      Clients 
@@ -1020,6 +1334,29 @@ footer p {
 
   .side-bar {
     margin-top: 80px;
+  }
+}
+
+/* Tech Stack responsive columns: 6 desktop, 4 tablet, 2 mobile. */
+.tech-stack-portfolio .items {
+  float: left;
+  width: 16.666667%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .tech-stack-portfolio .items {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tech-stack-portfolio .items {
+    width: 50%;
+  }
+
+  .tech-stack-portfolio .tech-logo-item > img {
+    width: 105px;
+    height: 85px;
   }
 }
 /* -------------------------------------------------------
