@@ -228,7 +228,7 @@ p {
 }
 
 .nav-scroll {
-  background: #fff;
+  background: #000000;
   -webkit-box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
   min-height: 60px;
@@ -243,16 +243,16 @@ p {
 }
 .nav-scroll .logo {
   padding-top: 2px;
-  color: #1c1c1c;
+  color: #ffffff;
 }
 .nav-scroll .logo:hover, .nav-scroll .logo:focus {
-  color: #1c1c1c;
+  color: #ffffff;
 }
 .nav-scroll .navbar-nav > li > a {
-  color: #111 !important;
+  color: #ffffff !important;
 }
 .nav-scroll .navbar-nav > li > a:after {
-  background: #222;
+  background: #ffffff;
 }
 
 .logo {
@@ -304,7 +304,7 @@ p {
 .header .caption .header-greeting {
   font-family: 'Rustling Sound', cursive;
   font-size: clamp(10rem, 16vw, 16rem);
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.1;
   margin-bottom: clamp(50px, 5vw, 90px);
 }
@@ -834,6 +834,14 @@ p {
 /* -------------------------------------------------------
                      Contact 
 -------------------------------------------------------- */
+.contact {
+    background-image:
+        linear-gradient(rgba(251, 251, 251, 0.698), rgba(0, 0, 0, 0.527)),
+        url('../img/enrico-bet-IicyiaPYGGI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .contact .info .item {
   margin-bottom: 30px;
 }
@@ -878,12 +886,13 @@ p {
                      Footer 
 -------------------------------------------------------- */
 footer {
-  background: #1c1c1c;
+  background: #303f00b7;
   padding: 30px;
 }
 footer p {
   font-size: 13px;
   word-spacing: 2px;
+  color: #ffffff;
 }
 
 /* -------------------------------------------------------
