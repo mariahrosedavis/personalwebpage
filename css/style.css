@@ -1390,7 +1390,7 @@ footer p {
   font-weight: 300;
 }
 .error p {
-  color: #eee;
+  color: #000000;
   margin-bottom: 10px;
 }
 .error input {
