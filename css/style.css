@@ -1378,7 +1378,7 @@ footer p {
 -------------------------------------------------------- */
 .error {
   height: 100vh;
-  color: #fff;
+  color: #000000;
 }
 .error h2 {
   font-size: 100px;
