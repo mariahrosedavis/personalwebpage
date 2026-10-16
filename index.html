@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="english">
 
     <head>
 
@@ -673,7 +673,14 @@
 							</div>
 
 						<!-- contact form -->
-						<form class="form" id="contact-form" method="post" action="contact.php">
+						<form
+							class="form"
+							id="formspree-contact-form"
+							method="POST"
+							action="https://formspree.io/f/mrbpbyjl"
+							target="_blank"
+							onsubmit="clearForm()"
+						>
 		                    <div class="messages"></div>
 
 		                    <div class="controls">
@@ -758,6 +765,15 @@
 
       	<!-- custom script -->
         <script src="js/custom.js"></script>
+
+		<!-- JavaScript to clear the form after submission -->
+		<script>
+			function clearForm() {
+				setTimeout(function () {
+					document.getElementById("formspree-contact-form").reset();
+				}, 1000); // Wait 1 second before clearing the form
+			}
+		</script>
 
     </body>
 </html>
