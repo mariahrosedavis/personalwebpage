@@ -1465,7 +1465,7 @@ footer p {
   }
 }
 
-/* Tech Stack responsive columns: 6 desktop, 4 tablet, 2 mobile. */
+/* Tech Stack responsive columns: 6 desktop, 4 tablet, 3 mobile. */
 .tech-stack-portfolio .items {
   float: left;
   width: 16.666667%;
@@ -1478,13 +1478,39 @@ footer p {
 }
 
 @media screen and (max-width: 767px) {
+  .tech-stack-portfolio .filtering {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 18px 14px;
+    padding: 0 12px;
+  }
+
+  .tech-stack-portfolio .filtering span {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
   .tech-stack-portfolio .items {
-    width: 50%;
+    width: 33.333333%;
+    padding-right: 6px;
+    padding-left: 6px;
+    margin-bottom: 12px;
+  }
+
+  .tech-stack-portfolio .tech-logo-item {
+    height: 165px;
   }
 
   .tech-stack-portfolio .tech-logo-item > img {
-    width: 105px;
-    height: 85px;
+    width: 80px;
+    height: 65px;
   }
 }
 /* -------------------------------------------------------

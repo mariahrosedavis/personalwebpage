@@ -1189,6 +1189,39 @@ footer{
 			width: 100%;
 		}
 	}
+
+	.tech-stack-portfolio{
+
+		.filtering{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 18px 14px;
+			padding: 0 12px;
+
+			span{
+				margin: 0;
+				font-size: 14px;
+				line-height: 1.35;
+			}
+		}
+
+		.items{
+			width: 33.333333%;
+			padding-right: 6px;
+			padding-left: 6px;
+			margin-bottom: 12px;
+		}
+
+		.tech-logo-item{
+			height: 165px;
+
+			> img{
+				width: 80px;
+				height: 65px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: $desk){
