@@ -592,6 +592,68 @@ p {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+.portfolio .tech-logo-item .sm-titl {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.portfolio .tech-logo-item .overlay-info {
+  position: static;
+  top: 0;
+  height: 100%;
+  -webkit-transform: none;
+          transform: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.portfolio .tech-logo-item .tech-classification {
+  margin-bottom: 0;
+  color: #777;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.portfolio .tech-logo-item:hover .tech-classification {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.portfolio .tech-logo-item .tech-tile-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  border: 0;
+  cursor: pointer;
+}
+.portfolio .tech-logo-item:focus-within {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+.portfolio .tech-logo-item:focus-within .item-img-overlay {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.portfolio .tech-logo-item:focus-within h6,
+.portfolio .tech-logo-item:focus-within .tech-classification {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
 
 /* -------------------------------------------------------
                      Personal Tech Stack
@@ -893,7 +955,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Clients 
+                     Clients
 -------------------------------------------------------- */
 .clients .citem .author-img {
   width: 90px;
@@ -901,6 +963,9 @@ p {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 15px;
+}
+.clients .company-carousel .citem {
+  padding: 10px 8px 2px;
 }
 .clients .citem p {
   word-spacing: 2px;
@@ -910,11 +975,60 @@ p {
   font-weight: 600;
   margin: 30px 0 5px;
 }
-.clients .citem span {
+.clients .citem > span {
   font-size: 12px;
   font-weight: 600;
   color: #888;
   margin-bottom: 30px;
+}
+.clients .company-mark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, .08);
+  text-decoration: none;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+.clients .company-mark:hover,
+.clients .company-mark:focus {
+  text-decoration: none;
+  border-color: #c8c8c8;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+.clients .company-mark:focus-visible {
+  outline: 3px solid rgba(48, 63, 0, .35);
+  outline-offset: 4px;
+}
+.clients .company-mark img {
+  display: block;
+  width: 68%;
+  height: 68%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.clients .company-mark--equinix img { width: 72%; }
+.clients .company-mark--elastic img { width: 55%; height: 55%; }
+.clients .company-mark--banyan img { width: 74%; height: 74%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .clients .company-mark:hover,
+  .clients .company-mark:focus {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 /* -------------------------------------------------------
