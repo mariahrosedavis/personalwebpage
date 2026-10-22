@@ -334,7 +334,7 @@ p {
 }
 .header .caption .header-greeting {
   font-family: 'Rustling Sound', cursive;
-  font-size: clamp(10rem, 16vw, 16rem);
+  font-size: clamp(3rem, 15vw, 16rem);
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: clamp(50px, 5vw, 90px);
@@ -481,6 +481,19 @@ p {
   left: -18px;
   bottom: -22px;
 }
+.hero.about-modern .hero-img:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 16px;
+  background: #000;
+  opacity: .25;
+  pointer-events: none;
+}
 .hero.about-modern .hero-img img {
   position: relative;
   z-index: 1;
@@ -491,7 +504,7 @@ p {
   position: absolute;
   right: -22px;
   bottom: 20px;
-  z-index: 2;
+  z-index: 3;
   padding: 10px 14px;
   border: 1px solid #e3e3e3;
   border-radius: 999px;
@@ -557,10 +570,10 @@ p {
   transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
 }
 .about-path--home {
-  background: #f3f4ed;
+  background: #dedede;
 }
 .about-path:hover {
-  border-color: #8c9363;
+
   -webkit-box-shadow: 0 14px 30px rgba(28, 28, 28, .1);
           box-shadow: 0 14px 30px rgba(28, 28, 28, .1);
   -webkit-transform: translateY(-4px);
@@ -586,7 +599,7 @@ p {
 }
 .about-path-label {
   margin-bottom: 7px;
-  color: #6f793f;
+  color: #000000;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -1537,7 +1550,7 @@ p {
 -------------------------------------------------------- */
 .contact {
     background-image:
-        linear-gradient(rgba(251, 251, 251, 0.698), rgba(0, 0, 0, 0.527)),
+        linear-gradient(rgb(251, 251, 251), rgba(0, 0, 0, 0.589)),
         url('../img/enrico-bet-IicyiaPYGGI-unsplash.jpg');
     background-size: cover;
     background-position: center;
@@ -1595,7 +1608,7 @@ p {
                      Footer 
 -------------------------------------------------------- */
 footer {
-  background: #303f00b7;
+  background: #102f26;
   padding: 30px;
 }
 footer p {
