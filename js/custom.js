@@ -61,7 +61,7 @@ $(function() {
 
         var bodyScroll = wind.scrollTop(),
             navbar = $(".navbar-default"),
-            h_hight = $(".header").outerHeight();
+            h_hight = $(".header, .min-header").first().outerHeight();
 
         if(bodyScroll > h_hight){
 
