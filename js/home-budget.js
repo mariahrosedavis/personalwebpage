@@ -57,7 +57,7 @@
     if (percentageFields.indexOf(id) !== -1) maximum = ' max="100"';
     if (id === "years") maximum = ' max="50"';
     if (id === "rate") maximum = ' max="30"';
-    var minimum = id === "years" || id === "income" ? 1 : 0;
+    var minimum = id === "years" ? 1 : 0;
 
     return '<label for="' + id + '">' + label +
       '<input id="' + id + '" name="' + id + '" type="number" min="' + minimum + '"' +
@@ -125,7 +125,7 @@
   }
 
   function render() {
-    var valid = form.checkValidity();
+    var valid = form.checkValidity() && Number(element("income").value) > 0;
     element("error").style.display = valid ? "none" : "block";
     if (!valid) {
       clearResult();
