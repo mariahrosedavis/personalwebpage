@@ -345,10 +345,10 @@
 							<div class="content">
 								<p class="blog-date">October 16, 2026</p>
 								<h6 class="tag">Data tools &amp; real estate</h6>
-								<h4><a href="home-budget-blog-post-post.html">I Built a Home Affordability Calculator for the Whole Monthly Picture</a></h4>
+								<h4><a href="home-budget-blog-post.html">I Built a Home Affordability Calculator for the Whole Monthly Picture</a></h4>
 								<p class="blog-excerpt">A practical planning tool that connects income, debt, down payment, and ownership costs to a home-price estimate you can actually understand.</p>
 								<div class="blog-card-actions">
-									<span class="more"><a href="single-home-budget-blog-post.html">Read the story</a></span>
+									<span class="more"><a href="home-budget-blog-post.html">Read the story</a></span>
 									<a class="blog-tool-link" href="home-budget.html">Try the calculator <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
 								</div>
 							</div>
@@ -380,7 +380,7 @@
 									<a href="https://calendly.com/mariahrosedavis/quick-chat"
 									target="_blank"
 									rel="noopener noreferrer"
-									aria-label="Schedule a quick chat">
+									aria-label="Email Mariah Davis">
 									<span class="icon">
 									<i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
 									</span>
@@ -522,7 +522,8 @@
 		<script>
 			function clearForm() {
 				setTimeout(function () {
-					document.getElementById("contact-form").reset();
+				var form = document.getElementById("formspree-contact-form");
+				if (form) form.reset();
 				}, 1000); // Wait 1 second before clearing the form
 			}
 		</script>

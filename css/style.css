@@ -1650,12 +1650,81 @@ footer p {
                     Responsive
 -------------------------------------------------------- */
 @media screen and (max-width: 767px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .section-padding {
+    padding: 75px 0;
+  }
+
+  .section-head {
+    margin-bottom: 55px;
+  }
+
+  .section-head h3 {
+    max-width: calc(100vw - 30px);
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .header {
+    height: 100vh;
+    height: 100svh;
+    min-height: 640px;
+    background-position: center center;
+  }
+
+  .header .caption {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 15px;
+  }
+
+  .header .caption h1.cd-headline {
+    width: 100%;
+    margin: 0 auto;
+    font-size: clamp(1.55rem, 6.4vw, 2.2rem);
+    line-height: 1.25;
+  }
+
+  .header .caption .cd-headline .blc {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .header .caption .cd-words-wrapper.mobile-wrap {
+    display: block;
+    width: 100%;
+    max-width: calc(100vw - 40px);
+    min-height: 2.7em;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .header .caption .cd-words-wrapper.mobile-wrap b {
+    width: 100%;
+    padding: .1em 0;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .header .caption .social-icon {
+    margin-top: 20px;
+  }
+
   .navbar-default .logo {
     margin-left: 20px;
   }
   .navbar-default .navbar-toggle {
     background: none !important;
-    margin-top: 15px !important;
+    min-width: 44px;
+    height: 44px;
+    margin-top: 10px !important;
+    padding: 9px 8px;
     border: none !important;
   }
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -1663,6 +1732,9 @@ footer p {
   }
   .navbar-default .navbar-toggle .icon-bar {
     background: #fff;
+    width: 28px;
+    height: 3px;
+    margin: 4px 0;
   }
   .navbar-default .navbar-nav > li {
     line-height: 0;
@@ -1682,6 +1754,10 @@ footer p {
   }
 
   .nav-scroll .navbar-toggle .icon-bar {
+    background: #fff;
+  }
+
+  .blog-nav .navbar-toggle .icon-bar {
     background: #111;
   }
 
@@ -1750,6 +1826,30 @@ footer p {
   .tech-stack-portfolio .tech-logo-item > img {
     width: 80px;
     height: 65px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-default .logo {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+
+  .navbar-default .navbar-toggle {
+    margin-right: 15px;
+  }
+
+  .tech-stack-portfolio .items {
+    width: 50%;
+  }
+
+  .tech-stack-portfolio .tech-logo-item {
+    height: 150px;
+  }
+
+  .tech-stack-portfolio .tech-logo-item > img {
+    width: 74px;
+    height: 60px;
   }
 }
 /* -------------------------------------------------------
