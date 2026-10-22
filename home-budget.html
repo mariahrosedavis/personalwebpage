@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore a home price that fits your income, debts, down payment, and preferred monthly housing budget with Mariah Davis's free Home Budget calculator.">
+    <meta name="keywords" content="home affordability calculator, home budget calculator, mortgage planning, housing costs, Mariah Davis">
+    <meta property="og:title" content="Home Budget | Mariah Davis">
+    <meta property="og:description" content="A clearer way to explore home affordability and the whole monthly ownership picture.">
+    <meta property="og:image" content="https://www.mariahdavis.dev/img/blog/home-budget-calculator.jpg">
+    <meta property="og:type" content="website">
+    <title>Home Budget | Mariah Davis</title>
+    <link href="img/favicon.ico" rel="icon" type="image/png">
+    <link rel="stylesheet" href="css/home-budget.css">
+</head>
+<body>
+    <a class="skip-link" href="#calculator">Skip to calculator</a>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Mariah Davis home">
+            <span class="brand-mark" aria-hidden="true">⌂</span>
+            <span>mariahdavis.dev</span>
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" aria-labelledby="page-title">
+            <p class="kicker">A little clarity. A place to call home.</p>
+            <h1 id="page-title">Find your room to live.</h1>
+            <p>Explore a home price that fits your income and your comfort level. Adjust the numbers to see the whole monthly picture.</p>
+            <div class="privacy-note">
+                <span aria-hidden="true">◇</span>
+                <span>No account required. Your entries and calculations stay in this browser.</span>
+            </div>
+        </section>
+
+        <div id="calculator" class="calculator-layout">
+            <section class="card inputs-card" aria-labelledby="starting-point-title">
+                <div class="card-heading">
+                    <div>
+                        <p class="eyebrow">Plan with your numbers</p>
+                        <h2 id="starting-point-title">Your starting point</h2>
+                    </div>
+                    <button id="reset" class="text-button" type="button">Reset example</button>
+                </div>
+
+                <div id="error" class="error" role="alert">Enter valid, nonnegative numbers in every field. Income and loan term must be greater than zero.</div>
+
+                <form id="budget-form">
+                    <div class="fields" id="primary"></div>
+
+                    <h3>Your comfort level</h3>
+                    <div class="fields" id="ratios"></div>
+
+                    <details open>
+                        <summary>Loan &amp; ownership costs</summary>
+                        <p class="helper-text">Illustrative starting values, not current rate quotes or local cost estimates. Replace them with lender quotes and property-specific costs.</p>
+                        <div class="fields" id="costs"></div>
+                    </details>
+
+                    <details>
+                        <summary>Roommate income &amp; cash to close</summary>
+                        <p class="helper-text">Roommate income reduces your out-of-pocket estimate only. It does not increase the home price or reduce the debt ratios shown.</p>
+                        <div class="fields" id="extras"></div>
+                    </details>
+                </form>
+
+                <div class="actions">
+                    <button id="print" class="button button-secondary" type="button">Print estimate</button>
+                    <button id="share" class="button button-secondary" type="button">Copy page link</button>
+                </div>
+                <p id="message" class="status-message" role="status"></p>
+            </section>
+
+            <section class="card result-card" aria-live="polite" aria-atomic="true">
+                <p class="eyebrow">Your estimated home budget</p>
+                <div class="price" id="price"></div>
+                <span class="pill" id="limit"></span>
+                <p class="result-intro">A planning estimate based on both monthly limits below, including your maintenance reserve.</p>
+                <div class="cost-bar" id="cost-bar" aria-hidden="true"></div>
+                <div id="breakdown"></div>
+                <div class="result-row result-total">
+                    <strong>Total ownership budget</strong>
+                    <strong id="total"></strong>
+                </div>
+                <div class="result-row">
+                    <span>After roommate contribution</span>
+                    <strong id="net"></strong>
+                </div>
+                <div class="result-stats" id="stats"></div>
+                <p class="result-caveat" id="caveat"></p>
+            </section>
+        </div>
+
+        <section class="explanation" aria-labelledby="how-it-works-title">
+            <p class="eyebrow">Behind the estimate</p>
+            <h2 id="how-it-works-title">How Home Budget works</h2>
+            <div class="explanation-grid">
+                <article>
+                    <span>01</span>
+                    <h3>Set your comfort level</h3>
+                    <p>The calculator checks both your housing-only budget and your total housing-plus-debt budget.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Include the overlooked costs</h3>
+                    <p>Taxes, insurance, HOA fees, mortgage insurance, and maintenance are included in the monthly picture.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Experiment freely</h3>
+                    <p>Adjust any assumption to see how it changes the estimate. Nothing is saved or sent anywhere.</p>
+                </article>
+            </div>
+        </section>
+
+        <aside class="planning-note">
+            <p><strong>For planning only.</strong> This calculator is not a loan approval, lending offer, financial advice, or guarantee of affordability. Debt ratios use gross income, not take-home pay. Allow separately for utilities, living expenses, savings, moving costs, and emergency funds. Taxes can change after purchase, and insurance may require separate wind or flood coverage. PMI is an illustrative conventional-loan estimate below 20% down; FHA, VA, and other programs differ. Closing costs exclude the down payment and are estimates, not an itemized cash-to-close disclosure.</p>
+            <a href="https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/" target="_blank" rel="noopener noreferrer">Read the CFPB’s homebuying budget guidance <span aria-hidden="true">↗</span></a>
+        </aside>
+
+        <div class="back-link"><a href="single-post.html">← Read the story behind Home Budget</a></div>
+    </main>
+
+    <footer>
+        <p>Made with ♥︎ by mariahdavis.dev</p>
+    </footer>
+
+    <script src="js/home-budget.js"></script>
+</body>
+</html>
