@@ -1672,7 +1672,7 @@ footer p {
 
   .header {
     height: 100vh;
-    height: 100svh;
+    height: 100lvh;
     min-height: 640px;
     background-position: center center;
   }
