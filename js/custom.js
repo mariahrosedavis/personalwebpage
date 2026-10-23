@@ -112,24 +112,16 @@ $(function() {
     });
 
 
-    // Blog carsouel
-    $('.blog .owl-carousel').owlCarousel({
-        margin: 30,
+    // Blog carousel
+    $('.blog .blog-carousel').owlCarousel({
+        items: 1,
+        margin: 0,
         loop:true,
         autoplay:true,
+        autoplayTimeout:7000,
+        autoplayHoverPause:true,
         smartSpeed:500,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            767:{
-                items:2
-            },
-            1000:{
-                items:3
-            }
-        }
+        dots:true
     });
 
 

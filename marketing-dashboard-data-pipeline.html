@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Why trustworthy marketing dashboards begin with clear definitions, reliable data pipelines, and validation—not better charts.">
+    <meta name="keywords" content="marketing analytics, data pipeline, dashboard, marketing operations, data quality, Mariah Davis">
+    <meta property="og:title" content="Your Marketing Dashboard Isn’t the Problem—Your Data Pipeline Is">
+    <meta property="og:description" content="A practical framework for building marketing reporting people can understand and trust.">
+    <meta property="og:image" content="https://www.mariahdavis.dev/img/blog/marketing-data-pipeline.jpg?v=20261022">
+    <meta property="og:type" content="article">
+    <title>Your Marketing Dashboard Isn’t the Problem | Mariah Davis</title>
+    <link href="img/favicon.ico" rel="icon" type="image/png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/et-line.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
+</head>
+<body>
+    <div class="loading"></div>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-icon-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="index.html#home">mariahdavis.dev</a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-icon-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#tech-stack">Tech Stack</a></li>
+                    <li><a href="index.html#companies">Companies</a></li>
+                    <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="min-header post-header">
+        <div class="v-middle mt-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 text-center">
+                        <p class="eyebrow">Marketing analytics &amp; operations</p>
+                        <h1>Your Marketing Dashboard Isn’t the Problem—Your Data Pipeline Is</h1>
+                        <p class="post-byline">By Mariah Davis · October 22, 2026 · 6 min read</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="blogs post-page section-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <article class="post mb-80">
+                        <figure class="post-img post-hero-image">
+                            <img src="img/blog/marketing-data-pipeline.jpg?v=20261022" alt="Illustration of marketing data sources moving through a clean pipeline into a dashboard">
+                            <figcaption>A useful dashboard is the visible end of a much larger system of definitions, transformations, and quality checks.</figcaption>
+                        </figure>
+
+                        <div class="content post-article-content">
+                            <p class="post-lede">When a marketing dashboard feels wrong, the instinct is often to redesign the chart. Change the colors. Add a filter. Rebuild it in a different platform. But a prettier dashboard cannot repair the data underneath it.</p>
+
+                            <p>A dashboard is the last mile of a long journey. Before a number reaches the screen, it may pass through an ad platform, website analytics, a marketing automation tool, a CRM, an integration, a warehouse, and several transformation steps. If those systems disagree—or if nobody has agreed on what the metric means—the dashboard simply presents the confusion more neatly.</p>
+
+                            <h2>The dashboard is usually the messenger</h2>
+                            <p>Imagine a report that shows 1,200 marketing-qualified leads for the quarter. It looks precise, but what does that number actually represent? It could count every person who reached a score threshold, only leads created during the quarter, or every lead whose status changed during the quarter. Recycled leads and duplicate records might be included. Deleted records might disappear from history.</p>
+
+                            <p>None of those interpretations is automatically wrong. The problem is that they answer different questions while sharing the same label. A dashboard cannot resolve that ambiguity on its own.</p>
+
+                            <aside class="post-callout">
+                                <p><strong>A metric is not trustworthy because it is precise.</strong> It is trustworthy when its definition is clear, its source is understood, and someone can explain how it was calculated.</p>
+                            </aside>
+
+                            <h2>Watch for the warning signs</h2>
+                            <p>Data-pipeline problems often appear as ordinary reporting frustrations. A few signals show up repeatedly:</p>
+
+                            <ul>
+                                <li>The same metric has a different value in the CRM, ad platform, and executive report.</li>
+                                <li>A number changes after the reporting period has closed, but nobody can explain why.</li>
+                                <li>Channel names, campaign types, or lifecycle stages need constant manual cleanup.</li>
+                                <li>Analysts maintain separate spreadsheets because the official model cannot answer basic questions.</li>
+                                <li>A report depends on one person remembering a complicated set of filters.</li>
+                            </ul>
+
+                            <p>These are not visualization problems. They point to unclear definitions, unstable source data, missing transformation logic, or a lack of validation.</p>
+
+                            <h2>Build trust from source to screen</h2>
+                            <p>I like to think about marketing reporting as five connected layers. Each layer should have a clear job.</p>
+
+                            <ol>
+                                <li><strong>Sources:</strong> Identify the systems where each fact originates and which system owns it. Ad platforms may own spend; the CRM may own opportunity stage and revenue.</li>
+                                <li><strong>Definitions:</strong> Write down the business meaning of every important metric. Specify the event, time window, inclusion rules, exclusions, and owner.</li>
+                                <li><strong>Transformations:</strong> Standardize fields, preserve history, handle duplicates, map campaigns, and make calculations visible instead of burying logic in a chart.</li>
+                                <li><strong>Validation:</strong> Test row counts, totals, freshness, accepted values, and relationships. Compare important outputs with their source systems on a schedule.</li>
+                                <li><strong>Presentation:</strong> Choose the smallest set of charts that helps someone make a decision. Only now is it time to debate colors and filters.</li>
+                            </ol>
+
+                            <p>This order matters. Starting with the dashboard encourages teams to make local fixes at the presentation layer. Starting with the decision and tracing backward creates a system that can support more than one report.</p>
+
+                            <h2>Ask better questions before choosing a tool</h2>
+                            <p>Reporting projects often begin with “Should we use Tableau, Power BI, or Looker Studio?” That decision matters, but it comes later. First ask:</p>
+
+                            <ul>
+                                <li>What decision should this report help someone make?</li>
+                                <li>Which metrics support that decision, and who owns their definitions?</li>
+                                <li>Where does each required field originate?</li>
+                                <li>How often should the data refresh, and how will we know if it did not?</li>
+                                <li>What historical behavior must be preserved?</li>
+                                <li>How will a user investigate a surprising number?</li>
+                            </ul>
+
+                            <p>The answers reveal the actual architecture you need. Sometimes that means a warehouse and modeled data. Sometimes a carefully governed spreadsheet is enough. The right solution is the simplest one that remains understandable, repeatable, and reliable.</p>
+
+                            <h2>A quick audit you can run this week</h2>
+                            <p>Choose one executive metric and trace it backward. Write down the dashboard formula, transformation logic, source fields, and business definition. Then compare the final value with the source and investigate every difference.</p>
+
+                            <p>You do not need to audit the entire marketing stack at once. One end-to-end metric can expose duplicate rules, naming inconsistencies, undocumented filters, and ownership gaps. More importantly, it gives the team a shared example of what trustworthy reporting should look like.</p>
+
+                            <p>The best dashboards are not the ones with the most charts. They are the ones that make a useful answer easy to find—and make that answer easy to trust.</p>
+
+                            <div class="post-footer-nav">
+                                <a href="blog.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to all posts</a>
+                                <a href="index.html#contact">Let’s talk data systems <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <p> Made with ♥︎ by mariahdavis.dev </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

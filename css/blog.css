@@ -13,6 +13,27 @@
   background: #fff;
 }
 
+.blog-listing-card + .blog-listing-card {
+  margin-top: 42px;
+}
+
+.blog .blog-carousel:not(.owl-loaded) .blog-feature-card + .blog-feature-card {
+  margin-top: 42px;
+}
+
+.blog .blog-carousel .owl-dots {
+  margin-top: 24px;
+}
+
+.blog .blog-carousel .owl-dot span {
+  background: #b7c9c0;
+}
+
+.blog .blog-carousel .owl-dot.active span,
+.blog .blog-carousel .owl-dot:hover span {
+  background: #173f33;
+}
+
 .blog .blog-feature-card .post-img {
   display: block;
   min-height: 390px;
@@ -85,8 +106,33 @@
 
 .blog-header,
 .post-header {
-  background: #173f33;
+  background: #000000;
   color: #fff;
+}
+
+.blog-header {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  background-image: url('../img/pine-watt-2Hzmz15wGik-unsplash.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.blog-header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: #000;
+  opacity: .45;
+}
+
+.blog-header .v-middle {
+  z-index: 3;
 }
 
 .blog-header h1,
@@ -101,7 +147,7 @@
 .blog-header .eyebrow,
 .post-header .eyebrow {
   margin-bottom: 14px;
-  color: #b9d5c3;
+  color: #a6bba2;
   font-size: 11px;
   font-weight: 600;
 }
@@ -198,6 +244,20 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 1.9;
+}
+
+.post-article-content ul,
+.post-article-content ol {
+  margin: 0 0 28px 22px;
+  color: #3d4742;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.post-article-content li {
+  margin-bottom: 12px;
+  padding-left: 6px;
 }
 
 .post-article-content .post-lede {
