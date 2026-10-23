@@ -7,10 +7,15 @@
     <meta name="description" content="Writing by Mariah Davis about data, technology, marketing operations, real estate, and the useful things she builds.">
     <meta name="keywords" content="Mariah Davis, data analytics, technology, real estate, home affordability, blog">
     <title>Blog | Mariah Davis</title>
+
     <link href="img/favicon.ico" rel="icon" type="image/png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/et-line.css">
@@ -19,97 +24,173 @@
     <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
 </head>
 <body>
+    <!-- ====== Preloader ====== -->
     <div class="loading"></div>
+    <!-- ====== End Preloader ====== -->
 
+    <!-- ====== Navigation ====== -->
     <nav class="navbar navbar-default blog-nav">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-icon-collapse" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="logo" href="index.html">mariahdavis.dev</a>
+                <a class="logo" href="index.html#home">mariahdavis.dev</a>
             </div>
+
             <div class="collapse navbar-collapse" id="nav-icon-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#home">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
-                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#tech-stack">Tech Stack</a></li>
+                    <li><a href="index.html#companies">Companies</a></li>
+                    <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- ====== End Navigation ====== -->
 
-    <header class="min-header blog-header">
+    <!-- ====== Header ====== -->
+    <section id="home" class="min-header blog-header" data-scroll-index="0">
         <div class="v-middle mt-30">
             <div class="container">
                 <div class="row">
                     <div class="text-center">
-                        <h1>My Blog</h1>
-                        <p>Ideas, experiments, and useful things I build.</p>
+                        <h1 class="blog-template-title">My Blog</h1>
+                        <div class="blog-breadcrumbs">
+                            <a href="index.html#home">Home</a>
+                            <a href="blog.html" aria-current="page">Blog</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
+    <!-- ====== End Header ====== -->
 
-    <main class="blogs section-padding bg-gray">
+    <!-- ====== Blog ====== -->
+    <main class="blogs blog-index section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-1 col-md-10">
-                    <article class="post blog-listing-card">
-                        <a class="post-img" href="marketing-dashboard-data-pipeline.html">
-                            <img src="img/blog/marketing-data-pipeline.jpg?v=20261022" alt="Illustration of marketing data sources flowing through a clean pipeline into a dashboard">
-                        </a>
-                        <div class="content text-center">
-                            <div class="post-meta">
-                                <p class="blog-date">October 22, 2026 · 6 min read</p>
-                                <div class="post-title">
-                                    <h2><a href="marketing-dashboard-data-pipeline.html">Your Marketing Dashboard Isn’t the Problem—Your Data Pipeline Is</a></h2>
-                                </div>
-                                <p class="blog-category">Marketing analytics &amp; operations</p>
+                <div class="col-md-8">
+                    <div class="posts">
+                        <article class="post">
+                            <div class="post-img">
+                                <a href="marketing-dashboard-data-pipeline.html">
+                                    <img src="img/blog/marketing-data-pipeline-natural.jpg?v=20261022" alt="Natural workspace showing scattered marketing reports organized into a clean data pipeline and dashboard">
+                                </a>
                             </div>
-                            <div class="post-cont">
-                                <p>Why reliable reporting begins with shared definitions, visible transformations, and quality checks—not a prettier chart.</p>
-                            </div>
-                            <div class="blog-listing-actions">
-                                <a href="marketing-dashboard-data-pipeline.html" class="butn">Read the story</a>
-                            </div>
-                        </div>
-                    </article>
 
-                    <article class="post blog-listing-card">
-                        <a class="post-img" href="home-budget-blog-post.html">
-                            <img src="img/blog/home-budget-calculator.jpg?v=20261022" alt="Home Budget affordability calculator showing an estimated home budget and monthly cost breakdown">
-                        </a>
-                        <div class="content text-center">
-                            <div class="post-meta">
-                                <p class="blog-date">October 16, 2026 · 4 min read</p>
-                                <div class="post-title">
-                                    <h2><a href="home-budget-blog-post.html">I Built a Home Affordability Calculator for the Whole Monthly Picture</a></h2>
+                            <div class="content text-center">
+                                <div class="post-meta">
+                                    <div class="post-title">
+                                        <h5><a href="marketing-dashboard-data-pipeline.html">Your Marketing Dashboard Isn’t the Problem—Your Data Pipeline Is</a></h5>
+                                    </div>
+                                    <ul class="meta" aria-label="Post details">
+                                        <li><i class="fa fa-user" aria-hidden="true"></i> Mariah Davis</li>
+                                        <li><i class="fa fa-folder-open" aria-hidden="true"></i> Marketing Analytics</li>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> October 22, 2026</li>
+                                        <li><i class="fa fa-clock-o" aria-hidden="true"></i> 6 min read</li>
+                                    </ul>
                                 </div>
-                                <p class="blog-category">Data tools &amp; real estate</p>
+
+                                <div class="post-cont">
+                                    <p>Why reliable reporting begins with shared definitions, visible transformations, and quality checks—not a prettier chart.</p>
+                                </div>
+
+                                <a href="marketing-dashboard-data-pipeline.html" class="butn">Read More</a>
                             </div>
-                            <div class="post-cont">
-                                <p>A practical planning tool that connects income, debt, down payment, and ownership costs to a home-price estimate you can actually understand.</p>
+                        </article>
+
+                        <article class="post">
+                            <div class="post-img">
+                                <a href="home-budget-blog-post.html">
+                                    <img src="img/blog/home-budget-calculator.jpg?v=20261022" alt="Home Budget affordability calculator showing an estimated home budget and monthly cost breakdown">
+                                </a>
                             </div>
-                            <div class="blog-listing-actions">
-                                <a href="home-budget-blog-post.html" class="butn">Read the story</a>
-                                <a href="home-budget.html" class="butn blog-tool-button">Try the calculator</a>
+
+                            <div class="content text-center">
+                                <div class="post-meta">
+                                    <div class="post-title">
+                                        <h5><a href="home-budget-blog-post.html">I Built a Home Affordability Calculator for the Whole Monthly Picture</a></h5>
+                                    </div>
+                                    <ul class="meta" aria-label="Post details">
+                                        <li><i class="fa fa-user" aria-hidden="true"></i> Mariah Davis</li>
+                                        <li><i class="fa fa-folder-open" aria-hidden="true"></i> Data Tools &amp; Real Estate</li>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> October 16, 2026</li>
+                                        <li><i class="fa fa-clock-o" aria-hidden="true"></i> 4 min read</li>
+                                    </ul>
+                                </div>
+
+                                <div class="post-cont">
+                                    <p>A practical planning tool that connects income, debt, down payment, and ownership costs to a home-price estimate you can actually understand.</p>
+                                </div>
+
+                                <a href="home-budget-blog-post.html" class="butn">Read More</a>
+                                <a href="home-budget.html" class="butn blog-secondary-button">Try the Calculator</a>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
                 </div>
+
+                <aside class="col-md-4" aria-label="Blog sidebar">
+                    <div class="side-bar">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <h6>Recent Posts</h6>
+                            </div>
+                            <ul>
+                                <li><a href="marketing-dashboard-data-pipeline.html">Your Marketing Dashboard Isn’t the Problem—Your Data Pipeline Is</a></li>
+                                <li><a href="home-budget-blog-post.html">I Built a Home Affordability Calculator for the Whole Monthly Picture</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget">
+                            <div class="widget-title">
+                                <h6>Categories</h6>
+                            </div>
+                            <ul>
+                                <li><a href="marketing-dashboard-data-pipeline.html">Marketing Analytics &amp; Operations</a></li>
+                                <li><a href="home-budget-blog-post.html">Data Tools &amp; Real Estate</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget">
+                            <div class="widget-title">
+                                <h6>Featured Tool</h6>
+                            </div>
+                            <ul>
+                                <li><a href="home-budget.html">Home Budget Calculator</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget blog-about-widget">
+                            <div class="widget-title">
+                                <h6>About This Blog</h6>
+                            </div>
+                            <p>Ideas about data, marketing operations, technology, real estate, and the useful things I build along the way.</p>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
     </main>
+    <!-- ====== End Blog ====== -->
 
+    <!-- ====== Footer ====== -->
     <footer>
-        <div class="container text-center"><div class="row">
-            <p>Made with ♥︎ by mariahdavis.dev </p>
-        </div></div>
+        <div class="container text-center">
+            <div class="row">
+                <p>Made with ♥︎ by mariahdavis.dev</p>
+            </div>
+        </div>
     </footer>
+    <!-- ====== End Footer ====== -->
 
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
@@ -118,6 +199,7 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/animated.headline.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>

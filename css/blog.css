@@ -135,6 +135,70 @@
   z-index: 3;
 }
 
+/* Blog index: keep the original Daniels template structure and rhythm. */
+.blog-header .blog-template-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+  margin: 0;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.blog-header .blog-breadcrumbs {
+  margin-top: 16px;
+}
+
+.blog-index {
+  background: #fff;
+}
+
+.blog-index .posts .post-img {
+  overflow: hidden;
+}
+
+.blog-index .posts .post-img img {
+  display: block;
+  width: 100%;
+  transition: transform .5s ease;
+}
+
+.blog-index .posts .post-img:hover img {
+  transform: scale(1.025);
+}
+
+.blog-index .posts .post .content .meta li i {
+  margin-right: 4px;
+}
+
+.blog-index .posts .post .content .butn + .butn {
+  margin-left: 8px;
+}
+
+.blog-index .posts .post .content .blog-secondary-button {
+  border-color: #1c1c1c;
+}
+
+.blog-index .side-bar .widget li a {
+  color: #777;
+  line-height: 1.7;
+  transition: color .25s ease;
+}
+
+.blog-index .side-bar .widget li a:hover {
+  color: #1c1c1c;
+}
+
+.blog-index .blog-about-widget p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
 .blog-header h1,
 .post-header h1 {
   margin-bottom: 16px;
@@ -147,14 +211,14 @@
 .blog-header .eyebrow,
 .post-header .eyebrow {
   margin-bottom: 14px;
-  color: #a6bba2;
+  color: #e6b58b;
   font-size: 11px;
   font-weight: 600;
 }
 
 .blog-header > .v-middle > .container p:last-child,
 .post-header .post-byline {
-  color: #dce8e1;
+  color: #8b9d92;
 }
 
 .post-header {
@@ -332,6 +396,21 @@
   .blog-header h1,
   .post-header h1 {
     font-size: 34px;
+  }
+
+  .blog-header .blog-template-title {
+    max-width: calc(100vw - 30px);
+    padding: 0;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .blog-index .posts .post .content {
+    padding: 38px 20px;
+  }
+
+  .blog-index .posts .post .content .butn + .butn {
+    margin-left: 4px;
   }
 
   .post-header {
