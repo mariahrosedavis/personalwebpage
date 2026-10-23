@@ -1672,9 +1672,11 @@ footer p {
 
   .header {
     height: 100vh;
-    height: 100lvh;
+    height: calc(100lvh + 3px);
     min-height: 640px;
+    margin-bottom: -3px;
     background-position: center center;
+    z-index: 1;
   }
 
   .header .caption {
